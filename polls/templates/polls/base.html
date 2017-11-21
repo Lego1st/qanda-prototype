@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+	<head>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="{% static '/polls/style.css' %}" />
+	</head>
+	<body>
+		<nav class="row navbar navbar-fixed-top" id="header">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#" id="mytitle">QandA</a>
+		    </div>
+		    <ul class="nav navbar-nav navbar-left">
+		      <li><a href="/polls">Home</a></li>
+		      <li><a href="#project">Profile</a></li> 
+		      <li><a href="#contact">Ask</a></li> 
+		    </ul>
+		    <form class="navbar-form navbar-right">
+		    	<input type="text" class="form-control" name="Search" placeholder="Search">
+	    	</form>
+		  </div>
+		</nav>
+		{% block content %}
+		{% endblock content %}
+		
+	</body>
+</html>
