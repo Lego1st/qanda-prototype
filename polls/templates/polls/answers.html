@@ -1,0 +1,23 @@
+{% load static %}
+{% for i in "xxx" %}
+<div style="margin-top: 50px">
+	<!-- Answer block -->
+	<div class="row">
+		<div class="col-xs-1"><img class="resize" src="{% static 'polls/images/default_ava.jpg' %}" alt="User_avatar"></div>
+		<div class="col-xs-1">
+			Username<br>Time
+		</div>
+	</div>
+	<p>
+		Imagine there’s a weatherman who lives in Whoville, Jim, who spends his days keeping records of past, current, and predicted weather conditions. Whenever somebody in Whoville wants to know the weather, they call him up on the telephone (1–800-WEATHER) and make their inquiry.
+	</p>
+	<form class="row form-group">
+		<div class="col-xs-1">
+			<input type="submit" class="btn btn-primary" value="Vote">
+		</div>
+		<div class="col-xs-11">
+			<input type="text" class="form-control" placeholder="Repy...">
+		</div>
+	</form>
+</div>
+{% endfor %}

@@ -6,14 +6,14 @@
 		<div><a href="#" class="category">Catergory</a></div>
 		<br><br>
 		<div class="row">
-			<div class="col-xs-1"><img class="resize" src="{% static 'polls/default_ava.jpg' %}" alt="User_avatar"></div>
+			<div class="col-xs-1"><img class="resize" src="{% static 'polls/images/default_ava.jpg' %}" alt="User_avatar"></div>
 			<div class="col-xs-1">Username</div>
 		</div>
-		<div>July 7th, 2017</div>
-		<h2>Question title of question n.o. {{question_id}}</h2>		
+		<div>{{question.time}}</div>
+		<h2>{{question.title}}</h2>		
 		
 		<div>
-			<p>(Random Description) Imagine there’s a weatherman who li When you call Jim, you must make your inquiry in a speci</p>
+			<p>{{question.content}}</p>
 		</div>
 		<form class="answer-box">
 			<div class="row" >
@@ -33,27 +33,8 @@
 		<hr class="hrstyle" width="100%"> 
 		<div class="col-xs-3 no-answer-tag">15 answers</div>
 
-		{% for i in "xxx" %}
-		<div style="margin-top: 50px">
-			<!-- Answer block -->
-			<div class="row">
-				<div class="col-xs-1"><img class="resize" src="{% static 'polls/default_ava.jpg' %}" alt="User_avatar"></div>
-				<div class="col-xs-1">
-					Username<br>Time
-				</div>
-			</div>
-			<p>
-				Imagine there’s a weatherman who lives in Whoville, Jim, who spends his days keeping records of past, current, and predicted weather conditions. Whenever somebody in Whoville wants to know the weather, they call him up on the telephone (1–800-WEATHER) and make their inquiry.
-			</p>
-			<form class="row form-group">
-				<div class="col-xs-1">
-					<input type="submit" class="btn btn-primary" value="Vote">
-				</div>
-				<div class="col-xs-11">
-					<input type="text" class="form-control" placeholder="Repy...">
-				</div>
-			</form>
+		<div>	{% include 'polls/answers.html' %}
 		</div>
-		{% endfor %}
+		
 </div>
 {% endblock content %}

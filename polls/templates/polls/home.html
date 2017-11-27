@@ -21,16 +21,16 @@
 				{% for question in questions %}
 					<div class="box">
 						<div><a href="#" class="category">Catergory</a></div>
-						<h2><a href="{{question}}/">Question title {{question}}</a></h2>
-						<div>Time</div>
+						<h2><a href="{% url 'polls:details' question.id %}">{{question.title}}</a></h2>
+						<div>{{question.time}}</div>
 						<br>
 						<div class="row">
-							<div class="col-xs-1"><img class="resize" src="{% static 'polls/default_ava.jpg' %}" alt="User_avatar"></div>
+							<div class="col-xs-1"><img class="resize" src="{% static 'polls/images/default_ava.jpg' %}" alt="User_avatar"></div>
 							<div class="col-xs-1">Username</div>
 						</div>
 						
 						<div>
-							<p>(Random Answer Text) Imagine there’s a weatherman who lives in Whoville, Jim, who spends his days keeping records of past, current, and predicted weather conditions. Whenever somebody in Whoville wants to know the weather, they call him up on the telephone (1–800-WEATHER) and make their inquiry. When you call Jim, you must make your inquiry in a speci</p>
+							<p>{{question.content}}</p>
 						</div>
 					</div>
 				{% endfor %}
